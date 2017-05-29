@@ -29,7 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 butDialog.setText(itemArr[i]);
             }
         });
-        //   diglog.setMessage("Message Here");
+          diglog.setMessage("Message Here");
+        //라디오 버튼 목록
+        diglog.setSingleChoiceItems(itemArr,0,new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                butDialog.setText(itemArr[i]);
+            }
+        });
 
         diglog.setPositiveButton("OK", null);
         diglog.show();
